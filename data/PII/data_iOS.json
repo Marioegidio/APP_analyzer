@@ -31,19 +31,16 @@
             "Fisciano",
             "84084"
         ],
-        "residenza": [
+        "location": [
             "*Inserisci RESIDENZA*"
-        ],
-        "telefono": [
-            "*Inserisci NUMERO DI TELEFONO*"
         ],
         "imei": [
             "*Inserisci IMEI*"
         ],
-        "mac-addres": [
+        "mac_addres": [
             "*Inserisci MAC ADDRESS*"
         ],
-        "numero_serie": [
+        "serial_number": [
             "*Inserisci SERIAL NUMBER*"
         ],
         "acceleremoter": [
@@ -52,10 +49,7 @@
         "gyroscope": [
             "gyroscope"
         ],
-        "wifi_ssid": [
-            "*Inserisci NOME WIFI*"
-        ],
-        "rubrica": [
+        "contacts": [
             "3583503500",
             "3773773221",
             "3213213213",
