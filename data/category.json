@@ -1,0 +1,72 @@
+{
+    "popolari": {
+        "education": [
+            "duolinguo"
+        ],
+        "fitness": [
+            "myfitnesspal"
+        ],
+        "shopping": [
+            "wish"
+        ],
+        "lifestyle": [
+            "pinterest"
+        ],
+        "business": [
+            "indeed"
+        ],
+        "travel": [
+            "booking"
+        ],
+        "social": [
+            "twitter"
+        ],
+        "entertainment": [
+            "youtube"
+        ],
+        "music": [
+            "soundcloud"
+        ],
+        "weather": [
+            "ilmeteoit"
+        ],
+        "news": [
+            "googlenews"
+        ]
+    },
+    "non_popolari": {
+        "weather": [
+            "iconameteo"
+        ],
+        "entertainment": [
+            "vvvvid"
+        ],
+        "social": [
+            "vero"
+        ],
+        "business": [
+            "trovalavoro"
+        ],
+        "music": [
+            "mixcloud"
+        ],
+        "shopping": [
+            "bangood"
+        ],
+        "lifestyle": [
+            "dribbble"
+        ],
+        "travel": [
+            "caronte"
+        ],
+        "news": [
+            "ilponte"
+        ],
+        "education": [
+            "learnmatch"
+        ],
+        "fitness": [
+            "contatorecalorie"
+        ]
+    }
+}

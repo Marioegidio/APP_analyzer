@@ -1,0 +1,70 @@
+{
+    "Utente": {
+        "user_data": [
+            "Mario",
+            "Mario Rossi",
+            "Rossi",
+            "Rosso",
+            "mario502508",
+            "Mario71254",
+            "569631210",
+            "Mario20625939",
+            "Mario52596731",
+            "Mario",
+            "marioross",
+            "lormar190@gmail.com",
+            "*Inserisci PASSWORD*",
+            "RSSMRA90H25H703M",
+            "25/06/1990",
+            "Monday, Jun 25th 1990",
+            "Monday 25th of June 1990",
+            "June 25, 1990",
+            "06-25-1990",
+            "1990-06-25",
+            "Mon, 25 Jun 90 00:00:00 +0200",
+            "1990-06-25T00:00:00+0200",
+            "1990/06/25",
+            "25-06-1990",
+            "1990-06-25",
+            "Fisciano (SA)",
+            "Fisciano(SA)",
+            "Fisciano",
+            "84084"
+        ],
+        "residenza": [
+            "*Inserisci RESIDENZA*"
+        ],
+        "telefono": [
+            "*Inserisci NUMERO DI TELEFONO*"
+        ],
+        "imei": [
+            "*Inserisci IMEI*"
+        ],
+        "mac-addres": [
+            "*Inserisci MAC ADDRESS*"
+        ],
+        "numero_serie": [
+            "*Inserisci SERIAL NUMBER*"
+        ],
+        "acceleremoter": [
+            "acceleromet"
+        ],
+        "gyroscope": [
+            "gyroscope"
+        ],
+        "wifi_ssid": [
+            "*Inserisci NOME WIFI*"
+        ],
+        "rubrica": [
+            "3583503500",
+            "3773773221",
+            "3213213213",
+            "3963963965",
+            "3123123125",
+            "3543543541"
+        ],
+        "ad_id": [
+            "*Inserisci AD_ID*"
+        ]
+    }
+}
