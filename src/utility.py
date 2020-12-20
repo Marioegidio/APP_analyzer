@@ -198,7 +198,7 @@ def buildChart1(thirdPartSites, desc=""):
     ])
     # Change the bar mode
     fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#Richieste"}, barmode='group',  font={
-                      "size": 20}, title=("Numero richieste a siti di terze parti"+desc.strip()+""))
+                      "size": 20}, title=("Numero richieste a siti di terze parti"+desc+""))
     fig.show()
     # fine chart1
 
@@ -228,7 +228,7 @@ def buildChart2(thirdPartSites_ios, thirdPartSites_android, desc=""):
     ])
     # Change the bar mode
     fig.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#Richieste"}, barmode='group',  font={
-                      "size": 20}, title=("Numero rischieste a siti di terze parti"+desc.strip()+" (iOS/Android)"))
+                      "size": 20}, title=("Numero rischieste a siti di terze parti"+desc+" (iOS/Android)"))
     fig.show()
     # fine chart2
 
@@ -261,7 +261,7 @@ def buildChart3(thirdPartSites, attributes, desc=""):
 
     fig = go.Figure(data=dataCreated,)
     fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={
-                      "size": 20}, title=("Leaks siti di terze parti"+desc.strip()+""))
+                      "size": 20}, title=("Leaks siti di terze parti"+desc+""))
     fig.show()
     # fine chart3
 
@@ -308,12 +308,12 @@ def buildChart4(thirdPartSites_android, thirdPartSites_ios, attributes, desc="")
 
     fig_android = go.Figure(data=dataCreated_android)
     fig_android.update_layout(barmode='stack', xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, font={
-                              "size": 20}, title=("App Android (siti di terze parti"+desc.strip()+")"))
+                              "size": 20}, title=("App Android (siti di terze parti"+desc+")"))
     fig_android.show()
 
     fig_ios = go.Figure(data=dataCreated_ios)
     fig_ios.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={
-                          "size": 20}, title=("App iOS (siti di terze parti"+desc.strip()+")"),)
+                          "size": 20}, title=("App iOS (siti di terze parti"+desc+")"),)
     fig_ios.show()
     # fine chart4
 
@@ -358,11 +358,11 @@ def buildChart5(thirdPartSites, fileName, attributes, desc=""):
             go.Bar(name=attribute, x=CatList, y=leakValue, marker_color=colors[index]))
 
     fig_pop = go.Figure(data=dataCreated_pop)
-    fig_pop.update_layout(barmode='stack', xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, font={"size": 20},  title=("Leaks App Popolari (siti di terze parti"+desc.strip()+")"),)
+    fig_pop.update_layout(barmode='stack', xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, font={"size": 20},  title=("Leaks App Popolari (siti di terze parti"+desc+")"),)
     fig_pop.show()
 
     fig_non_pop = go.Figure(data=dataCreated_nonPop)
-    fig_non_pop.update_layout(xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, barmode='stack',   font={"size": 20}, title=("Leaks App Non Popolari (siti di terze parti"+desc.strip()+")"),)
+    fig_non_pop.update_layout(xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, barmode='stack',   font={"size": 20}, title=("Leaks App Non Popolari (siti di terze parti"+desc+")"),)
     fig_non_pop.show()
     # fine chart5
 
