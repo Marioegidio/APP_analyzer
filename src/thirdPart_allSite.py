@@ -73,6 +73,10 @@ with open("data/domains/third_part_domains.json", 'w') as outJsonDomains:
                                     addDomain(thirdPartSites, entry,
                                               nomeApp, domain, user, attributes)
 
+                                # else:
+                                #     #generare file per siti non di terze parti
+                                #     print("non faccio nulla")
+
 # costruisco chart 1
 buildChart1(thirdPartSites)
 

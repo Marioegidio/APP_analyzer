@@ -191,13 +191,14 @@ def buildChart1(thirdPartSites, desc=""):
         chart1["sites"].append(item[0])
         chart1["requests"].append(item[1])
 
+    # fig = px.bar(chart1, x='sites', y='requests')
     fig = go.Figure(data=[
         go.Bar(name="AllApp",  x=chart1["sites"], y=chart1["requests"], text=chart1["requests"], textfont={'size': 15},
                textposition='outside', marker_line_width=0.5, marker_line_color='rgb(8,48,107)', opacity=0.85,),
     ])
     # Change the bar mode
-    fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#Richieste"}, barmode='group',  font={"size": 20}, title=("Numero rischieste a siti di terze parti "+desc+"  <br>" +
-                                                                                                                            "<i>Vengono mostrati il numero rischieste a siti di terze parti "+desc+" chiamati dalle App</i>"))
+    fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#Richieste"}, barmode='group',  font={
+                      "size": 20}, title=("Numero richieste a siti di terze parti"+desc.strip()+""))
     fig.show()
     # fine chart1
 
@@ -226,8 +227,8 @@ def buildChart2(thirdPartSites_ios, thirdPartSites_android, desc=""):
                x=chart2_android["apps"], y=chart2_android["requests"], text=chart2_android["requests"], textfont={'size': 15}, textposition='outside', marker_line_width=0.5, marker_line_color='rgb(8,48,107)', opacity=0.85)
     ])
     # Change the bar mode
-    fig.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#Richieste"}, barmode='group',  font={"size": 20}, title=("Numero rischieste a siti di terze parti "+desc+"  (iOS/Android)<br>" +
-                                                                                                                          "<i>Vengono mostrati il numero rischieste a siti di terze parti "+desc+" chiamati dalle App</i>"))
+    fig.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#Richieste"}, barmode='group',  font={
+                      "size": 20}, title=("Numero rischieste a siti di terze parti"+desc.strip()+" (iOS/Android)"))
     fig.show()
     # fine chart2
 
@@ -259,15 +260,15 @@ def buildChart3(thirdPartSites, attributes, desc=""):
                                   y=leakValue, marker_color=colors[index]))
 
     fig = go.Figure(data=dataCreated,)
-    fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={"size": 20}, title=("Leaks siti di terze parti "+desc+"<br>" +
-                                                                                                                            "<i>Vengono mostrati il numero e il tipo di Leaks per i siti di terze parti "+desc+"</i>"))
+    fig.update_layout(xaxis={"title": "Domini"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={
+                      "size": 20}, title=("Leaks siti di terze parti"+desc.strip()+""))
     fig.show()
     # fine chart3
 
 
 def buildChart4(thirdPartSites_android, thirdPartSites_ios, attributes, desc=""):
 
-    # indica il quarto grafico definito nell'analisi
+    # indica il secodno grafico definito nell'analisi
     chart4_android = {"apps": list(), "requests": list(), }
     chart4_ios = {"apps": list(), "requests": list(), }
 
@@ -306,13 +307,13 @@ def buildChart4(thirdPartSites_android, thirdPartSites_ios, attributes, desc="")
             go.Bar(name=attribute, x=appList, y=leakValue, marker_color=colors[index]))
 
     fig_android = go.Figure(data=dataCreated_android)
-    fig_android.update_layout(barmode='stack', xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, font={"size": 20}, title=("App Android  ( siti di terze parti "+desc+")<br>" +
-                                                                                                                                 "<i>Vengono mostrati il numero e il tipo di Leaks per ogni App</i>"))
+    fig_android.update_layout(barmode='stack', xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, font={
+                              "size": 20}, title=("App Android (siti di terze parti"+desc.strip()+")"))
     fig_android.show()
 
     fig_ios = go.Figure(data=dataCreated_ios)
-    fig_ios.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={"size": 20}, title=("App iOS  ( siti di terze parti "+desc+")<br>" +
-                                                                                                                              "<i>Vengono mostrati il numero e il tipo di Leaks per ogni App</i>"),)
+    fig_ios.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#PII leaks"}, barmode='stack',  font={
+                          "size": 20}, title=("App iOS (siti di terze parti"+desc.strip()+")"),)
     fig_ios.show()
     # fine chart4
 
@@ -357,12 +358,15 @@ def buildChart5(thirdPartSites, fileName, attributes, desc=""):
             go.Bar(name=attribute, x=CatList, y=leakValue, marker_color=colors[index]))
 
     fig_pop = go.Figure(data=dataCreated_pop)
-    fig_pop.update_layout(barmode='stack', xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, font={"size": 20},  title=("Leaks App Popolari ( siti di terze parti "+desc+")<br>" +
-                                                                                                                                   "<i>Vengono mostrati il numero e il tipo di Leaks per ogni categoria di App Popolari</i>"),)
+    fig_pop.update_layout(barmode='stack', xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, font={"size": 20},  title=("Leaks App Popolari (siti di terze parti"+desc.strip()+")"),)
     fig_pop.show()
 
     fig_non_pop = go.Figure(data=dataCreated_nonPop)
-    fig_non_pop.update_layout(xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, barmode='stack',   font={"size": 20}, title=("Leaks App Non Popolari( siti di terze parti "+desc+" )<br>" +
-                                                                                                                                        "<i>Vengono mostrati il numero e il tipo di Leaks per ogni categoria di App Non Popolari</i>"),)
+    fig_non_pop.update_layout(xaxis={"title": "Categorie"}, yaxis={"title": "#PII leaks"}, barmode='stack',   font={"size": 20}, title=("Leaks App Non Popolari (siti di terze parti"+desc.strip()+")"),)
     fig_non_pop.show()
     # fine chart5
+
+
+# // relazione
+# // tab permessi
+# // geo

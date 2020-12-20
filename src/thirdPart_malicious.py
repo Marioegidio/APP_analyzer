@@ -91,22 +91,25 @@ with open("data/domains/third_part_domains.json", 'w') as outJsonDomains:
                                         addDomain(thirdPartSites, entry,
                                                   nomeApp, domain, user, attributes)
 
+                                # else:
+                                #     #generare file per siti non di terze parti
+                                #     print("non faccio nulla")
+
 
 # costruisco chart 1
-buildChart1(thirdPartSites, "malicious")
+buildChart1(thirdPartSites," malicious")
 
 # costruisco chart2
-buildChart2(thirdPartSites_ios, thirdPartSites_android, "malicious")
+buildChart2(thirdPartSites_ios, thirdPartSites_android," malicious")
 
 # costruisco chart3
-buildChart3(thirdPartSites, attributes, "malicious")
+buildChart3(thirdPartSites, attributes," malicious")
 
 # costruisco chart4
-buildChart4(thirdPartSites_android, thirdPartSites_ios,
-            attributes, "malicious")
+buildChart4(thirdPartSites_android, thirdPartSites_ios, attributes," malicious")
 
 # costruisco chart5
-buildChart5(thirdPartSites, "data/category.json", attributes, "malicious")
+buildChart5(thirdPartSites, "data/category.json", attributes," malicious")
 
 with open("output.json", 'w') as outFile:
     json.dump(thirdPartSites, outFile)
