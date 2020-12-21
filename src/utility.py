@@ -228,7 +228,7 @@ def buildChart2(thirdPartSites_ios, thirdPartSites_android, desc=""):
     ])
     # Change the bar mode
     fig.update_layout(xaxis={"title": "Apps"}, yaxis={"title": "#Richieste"}, barmode='group',  font={
-                      "size": 20}, title=("Numero rischieste a siti di terze parti"+desc+" (iOS/Android)"))
+                      "size": 20}, title=("Numero richieste a siti di terze parti"+desc+" (iOS/Android)"))
     fig.show()
     # fine chart2
 
